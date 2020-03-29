@@ -33,7 +33,7 @@ def get_english_meaning(file, jap_emo)
   pp loaded_file
   lookup = loaded_file[:get_emoticon]
   result = nil
-  keys = get_emoticon.keys
+  keys = lookup.keys
   i = 0
   
   while i < keys.length do
