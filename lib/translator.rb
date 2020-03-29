@@ -31,15 +31,10 @@ def get_english_meaning(file, jap_emo)
   # code goes here
   loaded_file = load_library(file)
   pp loaded_file
-  lookup = loaded_file[:get_emoticon]
+  lookup = loaded_file[:get_meaning][jap_emo]
   result = nil
-  keys = lookup.keys
-  i = 0
-  
-  while i < keys.length do
     result = keys[i] if lookup[keys[i]] = jap_emo
-    i += 1
-  end
-  result = "Sorry, that emoticon was not found" if !result
+  result = "Sorry, that emoticon was not found"
+end
   result
 end
