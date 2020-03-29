@@ -4,12 +4,12 @@ require "yaml"
 def load_library(file)
   # code goes here
   parse_file = YAML.load_file(file)
-  parsed_hash = {get_meaning: nil, get_emoticon: nil}
-  keys = parse_file.keys
+  parsed_hash = {get_meaning: {}, get_emoticon: {}}
+  #keys = parse_file.keys
   
-  keys.each do |key|
-    parsed_hash[:get_meaning][parse_file[key][1]] = parse_file[key].to_s
-    parsed_hash[:get_emoticon][parse_file[key][0]] = parse_file[key][1]
+  parse_file.each do |meaning|
+    parsed_hash[:get_meaning][meaning][1]] = meaning.to_s
+    parsed_hash[:get_emoticon][meaning[0]] = meaning[1]
   end
   parsed_hash
 end
