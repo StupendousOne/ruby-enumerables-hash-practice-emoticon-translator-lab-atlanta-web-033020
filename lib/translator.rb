@@ -4,7 +4,7 @@ require "yaml"
 def load_library(file)
   # code goes here
   parse_file = YAML.load_file(file)
-  parsed_hash = {}
+  parsed_hash = {get_meaning: nil, get_emoticon: nil}
   
   pp parse_file
   
