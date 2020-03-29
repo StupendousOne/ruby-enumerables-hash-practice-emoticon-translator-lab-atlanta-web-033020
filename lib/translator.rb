@@ -15,7 +15,7 @@ end
 
 def get_japanese_emoticon(file, eng_emo)
   # code goes here
-  lookup = load_library(file)[eng_emo]
+  lookup = load_library(file)[:get_emoticon][eng_emo]
   result = nil
   if lookup then
     result = lookup else
@@ -24,6 +24,7 @@ def get_japanese_emoticon(file, eng_emo)
   result
 end
 
-def get_english_meaning
+def get_english_meaning(file, jap_emo)
   # code goes here
+  lookup =
 end
