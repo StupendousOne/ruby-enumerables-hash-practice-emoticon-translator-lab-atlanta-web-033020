@@ -15,7 +15,11 @@ end
 
 def get_japanese_emoticon(file, eng_emo)
   # code goes here
-  load_library(file)[eng_emo]
+  lookup = load_library(file)[eng_emo]
+  result = nil
+  if lookup then
+    result = lookup else
+    reult =
 end
 
 def get_english_meaning
