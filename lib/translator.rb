@@ -8,10 +8,8 @@ def load_library(file)
   #keys = parse_file.keys
   
   parse_file.each do |meaning|
-    pp meaning[1]
-    parsed_hash[:get_meaning][meaning[1]] = meaning.to_s
-    pp meaning[0]
-    parsed_hash[:get_emoticon][meaning[0]] = meaning[1]
+    parsed_hash[:get_meaning][meaning[1][1]] = meaning[0].to_s
+    parsed_hash[:get_emoticon][meaning[1][0]] = meaning[1][1]
   end
   
   parsed_hash
