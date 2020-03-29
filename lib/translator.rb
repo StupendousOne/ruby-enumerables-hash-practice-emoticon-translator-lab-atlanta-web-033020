@@ -33,8 +33,8 @@ def get_english_meaning(file, jap_emo)
   pp loaded_file
   lookup = loaded_file[:get_meaning][jap_emo]
   result = nil
-  if
-    result = keys[i] if lookup[keys[i]] = jap_emo
+  if lookup then
+    result = lookup else
     result = "Sorry, that emoticon was not found"
   end
   result
