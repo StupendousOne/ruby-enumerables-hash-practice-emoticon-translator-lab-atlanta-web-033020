@@ -6,8 +6,6 @@ def load_library(file)
   parse_file = YAML.load_file(file)
   parsed_hash = {get_meaning: nil, get_emoticon: nil}
   
-  pp parse_file
-  
   parse_file.each do |meaning|
     parsed_hash[:get_meaning][meaning[1]] = meaning.to_s
     parsed_hash[:get_emoticon][meaning[0]] = meaning[1]
