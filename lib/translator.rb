@@ -7,7 +7,7 @@ def load_library(file)
   parsed_hash = {}
   
   parse_file.each do |meaning|
-    parsed_hash[:get_meaning] = {meaning[0]
+    parsed_hash[:get_meaning] = {meaning[0] => meaning.toS}
     
   end
   parsed_hash
