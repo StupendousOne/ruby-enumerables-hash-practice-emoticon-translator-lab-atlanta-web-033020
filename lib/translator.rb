@@ -30,6 +30,7 @@ end
 def get_english_meaning(file, jap_emo)
   # code goes here
   loaded_file = load_library(file)
+  pp loaded_file
   lookup = loaded_file[:get_emoticon]
   result = nil
   keys = get_emoticon.keys
