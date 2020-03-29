@@ -19,7 +19,9 @@ def get_japanese_emoticon(file, eng_emo)
   result = nil
   if lookup then
     result = lookup else
-    reult =
+    result = "Sorry, that emoticon was not found"
+  end
+  result
 end
 
 def get_english_meaning
